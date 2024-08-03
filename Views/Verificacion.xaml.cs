@@ -26,7 +26,8 @@ namespace ElEconomico.Views
             if (isCodeValid)
             {
                 // Navegar a la pantalla de inicio de sesión si el código es válido
-                await Shell.Current.GoToAsync("//Login");
+                await Navigation.PushAsync(new Login());
+                //await Shell.Current.GoToAsync("//Login");
             }
             else
             {
