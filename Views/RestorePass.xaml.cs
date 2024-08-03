@@ -22,6 +22,7 @@ public partial class RestorePass : ContentPage
     private async void OnBackToLoginTapped(object sender, EventArgs e)
     {
         // Navegar de vuelta a la pantalla de login
-        await Shell.Current.GoToAsync("//Registro");
+        //await Shell.Current.GoToAsync("//Registro");
+        await Navigation.PushAsync(new Login());
     }
 }

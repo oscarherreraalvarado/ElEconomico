@@ -8,7 +8,7 @@ namespace ElEconomico
         {
             InitializeComponent();
 
-            MainPage = new Login();
+            MainPage = new AppShell();
         }
     }
 }

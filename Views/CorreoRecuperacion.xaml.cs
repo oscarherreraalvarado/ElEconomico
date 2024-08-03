@@ -9,6 +9,7 @@ public partial class CorreoRecuperacion : ContentPage
 
     private async void OnEnviarTokenClicked(object sender, EventArgs e)
     {
+        await Navigation.PushAsync(new RestorePass());
         // Lógica para enviar el token de recuperación
         // Ejemplo: 
         // string correo = correoEntry.Text;

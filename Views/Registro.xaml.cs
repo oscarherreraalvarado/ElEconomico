@@ -9,6 +9,8 @@ public partial class Registro : ContentPage
 
     private async void OnRegisterClicked(object sender, EventArgs e)
     {
+
+        await Navigation.PushAsync(new Verificacion());
         // Lógica de registro
         // if (registroExitoso)
         // {
