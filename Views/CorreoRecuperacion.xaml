@@ -1,0 +1,35 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElEconomico.Views.CorreoRecuperacion"
+             Title="Recuperar Contraseña" 
+             Shell.NavBarIsVisible="False">
+    <StackLayout>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Path Stroke="#fff" Data="m0,0.24502l438.07676,0l0.92327,197.62037c-73.00748,103.57091 -370.12501,76.29535 -439.00003,20.18649l0,-217.80685z" Fill="#2ECC71"/>
+            <StackLayout>
+                <Frame BackgroundColor="SkyBlue" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
+                    <Image Source="https://www.findool.com/imagenes/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="recuperar contraseña" TextColor="Red" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+                <Label Grid.Row="1" Text="Para poder recuperar su cuenta, escriba su correo electrónico registrado en la parte del texto donde se lo pide. Nosotros le enviaremos una contraseña temporal a su correo previamente registrado" TextColor="Black" HorizontalOptions="Center" FontSize="Subtitle" Margin="20,0"/>
+                <Frame Grid.Row="2" BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="20,10,20,0">
+                    <Entry Placeholder="Ingrese Correo electronico" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0"/>
+                </Frame>
+                <Button Grid.Row="3" Text="Enviar Token" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Clicked="OnEnviarTokenClicked"/>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>

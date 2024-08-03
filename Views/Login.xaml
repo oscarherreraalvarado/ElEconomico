@@ -1,0 +1,73 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElEconomico.Views.Login"
+             Title="Login" 
+             Shell.NavBarIsVisible="False">
+    <StackLayout>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Path Stroke="#fff" Data="m0,0.24502l438.07676,0l0.92327,197.62037c-73.00748,103.57091 -370.12501,76.29535 -439.00003,20.18649l0,-217.80685z" Fill="#2ECC71"/>
+            <StackLayout>
+                <Frame BackgroundColor="SkyBlue" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
+                    <Image Source="https://www.findool.com/imagenes/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Bienvenido!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+                <Label Grid.Row="1" Text="Iniciar Sesion y Continuar" TextColor="Gray" HorizontalOptions="Center" FontSize="Subtitle"/>
+                <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="SkyBlue" HeightRequest="50" WidthRequest="50" CornerRadius="30" Padding="0" Margin="5">
+                                <Image Source="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-256.png" Aspect="AspectFill" Margin="0"/>
+                            </Frame>
+                            <Entry Placeholder="Nombre de Usuario" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="SkyBlue" HeightRequest="50" WidthRequest="50" CornerRadius="30" Padding="0" Margin="5">
+                                <Image Source="https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/09_lock-256.png" Aspect="AspectFill" Margin="0"/>
+                            </Frame>
+                            <Entry Placeholder="Contraseña" TextColor="Black" FontAttributes="Bold" IsPassword="True" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" Margin="0,10,0,0" Padding="0">
+                        <CheckBox HeightRequest="20" WidthRequest="20" IsChecked="False"/>
+                        <Label Text="Recordarse de Mi" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="¿Has olvidado tu contraseña?" TextColor="#1D8348" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <!--<Label Text="¿Has olvidado tu contraseña?" TextColor="#1D8348" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>-->
+                    </StackLayout>
+                    <Button Text="Iniciar Sesion" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Clicked="OnLoginClicked"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
+                        <Label Text="¿No tienes una cuenta?" TextColor="DarkGray" FontSize="Small"/>
+                        <Label Text=" Registrarse" TextColor="#1D8348" FontAttributes="Bold" FontSize="Small">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnRegisterTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>
+
+    

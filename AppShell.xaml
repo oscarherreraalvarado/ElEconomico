@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ElEconomico.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ElEconomico"
+    xmlns:views="clr-namespace:ElEconomico.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ElEconomico">
+
+    <!-- Ruta para la página de Login -->
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate views:Login}"
+        Route="Login" />
+
+    <!-- Ruta para la página de Registro -->
+    <ShellContent
+        Title="Registro"
+        ContentTemplate="{DataTemplate views:Registro}"
+        Route="Registro" />
+
+    <!-- Ruta para la página de Verificación -->
+    <ShellContent
+        Title="Verificación"
+        ContentTemplate="{DataTemplate views:Verificacion}"
+        Route="Verificacion" />
+
+    <!-- Ruta para la página de Recuperar Contraseña -->
+    <ShellContent
+        Title="RecuperarContraseña"
+        ContentTemplate="{DataTemplate views:CorreoRecuperacion}"
+        Route="CorreoRecuperacion" />
+
+    <!-- Ruta para la página principal -->
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <!-- Ruta para la página de Restablecer Contraseña -->
+    <ShellContent
+        Title="RestablecerContraseña"
+        ContentTemplate="{DataTemplate views:RestorePass}"
+        Route="RestorePass" />
+</Shell>

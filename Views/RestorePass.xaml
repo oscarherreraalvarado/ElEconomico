@@ -1,0 +1,56 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElEconomico.Views.RestorePass"
+             Title="Restablecer la Contraseña"
+             Shell.NavBarIsVisible="False">
+    <StackLayout>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Path Stroke="#fff" Data="m0,0.24502l438.07676,0l0.92327,197.62037c-73.00748,103.57091 -370.12501,76.29535 -439.00003,20.18649l0,-217.80685z" Fill="#2ECC71"/>
+            <StackLayout>
+                <Frame BackgroundColor="SkyBlue" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
+                    <Image Source="https://www.findool.com/imagenes/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Restablecer la Contraseña" TextColor="Red" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+                <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry Placeholder="Ingrese contraseña actual" TextColor="Black" FontAttributes="Bold" IsPassword="True" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry Placeholder="Ingrese nueva contraseña" TextColor="Black" FontAttributes="Bold" IsPassword="True" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent" BorderColor="LightGreen" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry Placeholder="Confirmar nueva contraseña" TextColor="Black" FontAttributes="Bold" IsPassword="True" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <Button Text="Restablecer contraseña" BackgroundColor="#58D68D" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Clicked="OnResetPasswordClicked"/>
+                    <Label Text="Volver al Login" TextColor="#1D8348" FontAttributes="Bold" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,20,0,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnBackToLoginTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>
